@@ -12,8 +12,11 @@
     --hitam2 : #323232;
     --putih : #fff;
     --bmuda : #e2edff;
+    --biru : #0d6efd;
+    --biru2 : #25a8ff;
     --sky : #1FBBA9;
     --oren : #FA7A12;
+    --abu : #E2E2E2;
 
 }
 
@@ -86,7 +89,185 @@
 }
 /* ? akhir projects */
 
+/* ? ==================================== */
+/* ? my keyboard section */
+.keyboard-box {
+    position: relative;
+    background-color: var(--biru);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 500px;
+    transform-style: preserve-3d;
+
+}
+/* * before */
+
+.keyboard-box::before {
+    content: 'MY';
+    position: absolute;
+    color: var(--putih);
+    font-size: 6em;
+    font-weight: bold;
+    font-style: italic;
+    top: 30px;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+}
+
+.keyboard-box:hover::before {
+    opacity: .2;
+}
+
+.keyboard-box .btn-hitam {
+    background-color: var(--putih);
+    color: var(--hitam);
+}
+
+/* *after */
+.keyboard-box::after {
+    content: 'KEYBOARD';
+    position: absolute;
+    color: var(--putih);
+    font-size: 4.3em;
+    font-weight: bold;
+    font-style: italic;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    opacity: 0;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.keyboard-box:hover::after {
+    opacity: .2;
+}
+
+.keyboard-name {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color:  var(--abu);
+    text-align: center;
+    font-size: 2em;
+    opacity: 0;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transform: translate3d(0,0,0, 500px);
+    -webkit-transform: translate3d(0,0,0, 500px);
+    -moz-transform: translate3d(0,0,0, 500px);
+    -ms-transform: translate3d(0,0,0, 500px);
+    -o-transform: translate3d(0,0,0, 500px);
+}
+
+.keyboard-box:hover .keyboard-name {
+    top: 15px;
+    opacity: 1;
+}
+
+.keyboard-details-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 100px);
+    -webkit-transform: translate3d(-50%, 0, 100px);
+    -moz-transform: translate3d(-50%, 0, 100px);
+    -ms-transform: translate3d(-50%, 0, 100px);
+    -o-transform: translate3d(-50%, 0, 100px);
+    opacity: 0;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    z-index: 3;
+}
+
+.keyboard-box:hover .keyboard-details-button {
+    opacity: 1;
+    bottom: 20px;
+}
+
+.keyboard-details-button:hover {
+    background-color: var(--biru2);
+    color: var(--putih);
+    font-weight: 600;
+    box-shadow: 10px 10px 40px -1px var(--biru2);
+}
+
+.keyboard-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 90px);
+    -webkit-transform: translate3d(-50%, -50%, 80px);
+    -moz-transform: translate3d(-50%, -50%, 90px);
+    -ms-transform: translate3d(-50%, -50%, 90px);
+    -o-transform: translate3d(-50%, -50%, 90px);
+    max-width: 350px;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    z-index: 10;
+}
+
+.keyboard-box:hover .keyboard-img {
+    transform: translate3d(-50%, -50%, 100px) rotate(-10deg) scale(1.1);
+    -webkit-transform: translate3d(-50%, -50%, 100px) rotate(-10deg) scale(1.1);
+    -moz-transform: translate3d(-50%, -50%, 100px) rotate(-10deg) scale(1.1);
+    -ms-transform: translate3d(-50%, -50%, 100px) rotate(-10deg) scale(1.1);
+    -o-transform: translate3d(-50%, -50%, 100px) rotate(-10deg) scale(1.1);
+}
+
+
+/* ? akhir my keyboard section */
+
 /* ? ============================================== */
+
+/*  ? gallery */
+#gallery{
+    padding-top: 6rem;
+}
+#gallery .container .row h2{
+    font-weight: 600;
+    color: var(--hitam);
+    text-shadow: 1px 2px 2px var(--sky);
+}
+
+.gallery-img {
+    width: 100%;
+}
+
+#gallery .row > * {
+    padding: 0;
+}
+
+/* ? akhir galley */
 
 /* ? contact */
 #contact {
@@ -106,3 +287,4 @@ footer {
     background-color: var(--hitam);
 }
 /* ? akhir footer */
+

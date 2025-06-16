@@ -59,7 +59,7 @@ logoLink.addEventListener("click", () => {
     navLinks[0].classList.add("active");
 
     setTimeout(() => {
-      sections[0].classList.remove("active");
+      sections[0].classList.add("active");
     }, 1100);
   }
 });

@@ -1,627 +1,662 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portopolio - Nanda Kamarul Zaman</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio | Nanda Kamarul Zaman</title>
+    <!-- boxicons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
 
-  <link rel="stylesheet" href="dist/css/final.css" />
-  <link rel="stylesheet" href="dist/css/style.css">
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="active">
+      <!-- logo -->
+      <a href="#" class="logo">Nanda</a>
+      <!-- icon menu -->
+      <i class="bx bx-menu-alt-right" id="menu-icon"></i>
+      <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Resume</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <!-- end header -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-  <script>
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia(
-        '(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  </script>
-
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-</head>
-
-<body>
-  <!-- Header Start -->
-  <header class="absolute left-0 top-0 z-10 flex w-full items-center bg-transparent" data-aos="fade-down" data-aos-duration="1000">
-    <div class="container">
-      <div class="relative flex items-center justify-between">
-        <div class="px-4">
-          <a href="index.html" class="block py-6 text-lg font-bold text-primary">Nanda Kamarul Zaman</a>
-        </div>
-        <div class="flex items-center px-4">
-          <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
-            <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
-            <span class="hamburger-line transition duration-300 ease-in-out"></span>
-            <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
-          </button>
-
-          <!-- awal nav -->
-          <nav id="nav-menu"
-            class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark lg:dark:bg-transparent dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none">
-            <ul class="block lg:flex">
-              <li class="group">
-                <a href="index.html"
-                  class="mx-8 flex py-2 text-base text-dark transition duration-200 ease-in-out group-hover:text-primary dark:text-white">Beranda</a>
-              </li>
-              <li class="group">
-                <a href="#about"
-                  class="mx-8 flex py-2 text-base text-dark transition duration-200 ease-in-out group-hover:text-primary dark:text-white">Tentang
-                  Saya</a>
-              </li>
-              <li class="group">
-                <a href="#portfolio"
-                  class="mx-8 flex py-2 text-base text-dark transition duration-200 ease-in-out group-hover:text-primary dark:text-white">Portfolio</a>
-              </li>
-              <li class="group">
-                <a href="#clients"
-                  class="mx-8 flex py-2 text-base text-dark transition duration-200 ease-in-out group-hover:text-primary dark:text-white">Clients</a>
-              </li>
-              <li class="group">
-                <a href="#blog"
-                  class="mx-8 flex py-2 text-base text-dark transition duration-200 ease-in-out group-hover:text-primary dark:text-white">Blog</a>
-              </li>
-              <li class="group">
-                <a href="#contact"
-                  class="mx-8 flex py-2 text-base text-dark transition duration-200 ease-in-out group-hover:text-primary dark:text-white">Contact</a>
-              </li>
-              <li class="mt-3 md:mt-0 lg:mt-0 flex items-center pl-8">
-                <div class="flex">
-                  <span class="mr-2 text-sm text-slate-500"><i class="bi bi-sun-fill"></i></span>
-                  <input type="checkbox" class="hidden" id="dark-toggle">
-                  <label for="dark-toggle">
-                    <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
-                      <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
-                      </div>
-                    </div>
-                  </label>
-                  <span class="ml-2 text-sm text-slate-500"><i class="bi bi-moon-stars-fill"></i></span>
-                </div>
-              </li>
-            </ul>
-          </nav>
-          <!-- akhir nav -->
-        </div>
-      </div>
+    <div class="bars-box active">
+      <div class="bar" style="--i: 6"></div>
+      <div class="bar" style="--i: 5"></div>
+      <div class="bar" style="--i: 4"></div>
+      <div class="bar" style="--i: 3"></div>
+      <div class="bar" style="--i: 2"></div>
+      <div class="bar" style="--i: 1"></div>
     </div>
-  </header>
-  <!-- Header End -->
+    <!-- -------------------------------------------------------------------------------------------------- -->
+    <!-- home section -->
+    <section class="home active">
+      <div class="home-detail">
+        <h5>Hallo Semuanya, 👋 Saya</h5>
+        <h1>Nanda Kamarul Zaman</h1>
+        <h2>
+          I'm a
+          <span style="--i: 4" data-text="Design">Design</span>
+          <span style="--i: 3" data-text="Videografer">Videografer</span>
+          <span style="--i: 2" data-text="Freelancer">Freelancer</span>
+          <span style="--i: 1" data-text="Web Development">
+            Web Development
+          </span>
+        </h2>
 
-  <!-- Hero Section Start -->
-  <section id="home" class="pt-36 dark:bg-dark">
-    <div class="container">
-      <div class="flex flex-wrap">
-        <div class="w-full self-center px-4 lg:w-1/2">
-          <h1 class="text-base font-semibold text-primary md:text-xl" data-aos="fade-down" data-aos-duration="1500">
-            Hallo Semuanya 👋, saya
-            <span class="mt-1 block text-3xl font-bold text-dark lg:text-5xl dark:text-white">Nanda Kamarul Zaman</span>
-          </h1>
-          <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1000">
-            freelancer & <span class="text-dark dark:text-white">Web Developer</span>
-          </h2>
-          <p class="mb-10 font-medium leading-relaxed text-slate-400" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="2000">
-            Menjadi sukses di usia muda adalah pencapaian yang luar <span
-              class="font-bold text-dark dark:text-white">biasa!</span>
-          </p>
-
-          <div data-aos="fade-right" data-aos-duration="1500">
-            <a href="#contact"
-            class="rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Hubungi
-            Saya <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-
-        <div class="w-full self-end px-4 lg:w-1/2">
-          <div class="relative mt-10 lg:right-0 lg:mt-9" data-aos="zoom-in" data-aos-duration="2000">
-            <img src="dist/img/nanda.png" alt="Nanda Kamarul Zaman" class="mx-auto max-w-full relative z-10" width="761"
-              height="761" />
-            <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
-              <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#0ea5e9"
-                  d="M57.8,-16.4C64.6,2.4,52.9,29.5,31.3,46C9.6,62.4,-22,68.2,-39.2,55.4C-56.3,42.6,-58.9,11.3,-50,-10.3C-41.1,-31.9,-20.5,-43.8,2.5,-44.6C25.4,-45.4,50.9,-35.1,57.8,-16.4Z"
-                  transform="translate(100 100) scale(1.2)" />
-              </svg>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--Hero Section End -->
-
-  <!-- About section Start -->
-  <section id="about" class="pb-32 pt-36 dark:bg-dark">
-    <div class="container">
-      <div class="flex flex-wrap">
-        <div class="w-full px-4 lg:w-1/2" data-aos="fade-right" data-aos-duration="2000">
-          <h4 class="mb-3 text-lg font-bold uppercase text-primary">
-            Tentang Saya
-          </h4>
-          <h2 class="mb-5 max-w-xl text-3xl font-bold text-dark lg:text-4xl dark:text-white">
-            Yuk, menjadi generasi penerus!
-          </h2>
-          <p class="max-w-xl text-base font-medium text-secondary lg:text-lg" align="justify">
-            Halo Nama saya Nanda Kamarul Zaman. Saya Lulusan D3 Jurusan Teknik Komputer di Perguruan Tinggi Politeknik Sukabumi. Sebelum mengenal ke Dunia IT saya hanyalah lulusan SMA yang tidak tau mengenai Dunia IT seperti apa. pertama kali saya masuk ke jurusan Teknik Komputer saya tidak mencari tahu terlebih dahulu, <span class="text-base font-bold">APA ITU ? Teknik Komputer.</span> dan seperti apa Teknik Komputer. dan setelah pertama kali masuk dan melihat pembelajaran, disitulah saya pertama kali mengenal Dunia IT. <span class="text-base font-bold">Ingat!</span> jangan pernah melihat latar belakang seperti apa? yang terpenting adalah niat kita dan usaha kita untuk terus mencoba dan penasaran akan hal-hal baru.
-          </p>
-        </div>
-        <div class="w-full px-4 lg:w-1/2" data-aos="fade-left" data-aos-duration="2000">
-          <h3 class="mb-4 text-2xl font-semibold text-dark lg:pt-10 lg:text-3xl dark:text-white">
-            Mari berteman
-          </h3>
-          <p class="mb-6 text-base font-medium text-secondary lg:text-lg" align="justify">
-            ada pepatan mengatakan bahwasannya tak kenal maka tak sayang 😅.
-            Nah? ikuti Media Sosial saya di link berikut:
-          </p>
-          <div class="flex items-center">
-            <!-- Linkeidn -->
-            <a href="https://www.linkedin.com/in/nanda-kamarul-zaman-8b856a266/" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white">
-              <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>LinkedIn</title>
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
-            <!-- youtube -->
-            <a href="https://www.youtube.com/@nanda4356" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white">
-              <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>YouTube</title>
-                <path
-                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-              </svg>
-            </a>
-
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/kz.nanda/" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white">
-              <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>Instagram</title>
-                <path
-                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
-              </svg>
-            </a>
-
-            <!-- Facebook -->
-            <a href="https://web.facebook.com/nanda.k.zaman/" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white">
-              <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>Facebook</title>
-                <path
-                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg>
-            </a>
-
-            <!-- Twitter -->
-            <a href="https://twitter.com/nanda_kz" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white">
-              <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>Twitter</title>
-                <path
-                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-              </svg>
-            </a>
-
-            <!-- Tiktok -->
-            <a href="https://www.tiktok.com/@nandakz2510" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white">
-              <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>TikTok</title>
-                <path
-                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- About section End -->
-
-  <!-- Portfolio Section Start -->
-  <section id="portfolio" class="bg-slate-100 pb-16 pt-36 dark:bg-slate-800">
-    <div class="container">
-      <div class="w-full px-4">
-        <div class="mx-auto mb-16 max-w-xl text-center">
-          <h4 class="mb-2 text-lg font-semibold text-primary" data-aos="fade-down" data-aos-duration="1500">Portfolio</h4>
-          <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-white" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500">
-            Project Terbaru
-          </h2>
-          <p class="text-md font-medium text-secondary md:text-lg" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1000">
-            Berikut ini adalah project-project yang telah di buat:
-          </p>
-        </div>
-      </div>
-
-      <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
-        <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1500" data-aos-offset="400">
-          <div class="overflow-hidden rounded-md shadow-md">
-            <img src="dist/img/portfolio/satu.png" alt="Landing Page" width="w-full" />
-          </div>
-          <h3 class="mt-5 text-xl font-semibold text-dark dark:text-white">
-            Design Demon Slayer
-          </h3>
-          <p class="font-mediu text-base text-secondary">
-            membuka usaha stiker jenis demon slayer
-          </p>
-        </div>
-        <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1500" data-aos-offset="400" data-aos-delay="300">
-          <div class="overflow-hidden rounded-md shadow-md">
-            <img src="dist/img/portfolio/Jujutsu Kaisen1.png" alt="Landing Page" width="w-full" />
-          </div>
-          <h3 class="mt-5 text-xl font-semibold text-dark dark:text-white">
-            Design Jujutsu Kaisen
-          </h3>
-          <p class="font-mediu text-base text-secondary">
-            membuka usaha stiker jenis demon slayer
-          </p>
-        </div>
-        <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1500" data-aos-offset="400" data-aos-delay="400">
-          <div class="overflow-hidden rounded-md shadow-md">
-            <img src="dist/img/portfolio/quis_poster.png" alt="Landing Page" width="w-full" />
-          </div>
-          <h3 class="mt-5 text-xl font-semibold text-dark dark:text-white">
-            Poster Film 
-          </h3>
-          <p class="font-mediu text-base text-secondary">
-            membuat poster film menggunakan photoshop
-          </p>
-        </div>
-        <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1500" data-aos-offset="400" data-aos-delay="500">
-          <div class="overflow-hidden rounded-md shadow-md">
-            <img src="dist/img/portfolio/Untitled-1.png" alt="Landing Page" width="w-full" />
-          </div>
-          <h3 class="mt-5 text-xl font-semibold text-dark dark:text-white">
-            Design Kemasan Produk Makanan
-          </h3>
-          <p class="font-mediu text-base text-secondary">
-            membuat poster film menggunakan photoshop
-          </p>
-        </div>
-        <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1500" data-aos-offset="400" data-aos-delay="600">
-          <div class="overflow-hidden rounded-md shadow-md">
-            <img src="dist/img/portfolio/1.jpg" alt="Landing Page" width="w-full" />
-          </div>
-          <h3 class="mt-5 text-xl font-semibold text-dark dark:text-white">
-            Landing Page Nanda Kamarul Zaman
-          </h3>
-          <p class="font-mediu text-base text-secondary">
-            pembuatan portfolio pertama
-          </p>
-        </div>
-        <div class="mb-12 p-4 md:w-1/2" data-aos="fade-down" data-aos-duration="1500" data-aos-offset="400" data-aos-delay="700">
-          <div class="overflow-hidden rounded-md shadow-md">
-            <img src="dist/img/portfolio/datasekolah.jpg" alt="Landing Page" width="w-full" />
-          </div>
-          <h3 class="mt-5 text-xl font-semibold text-dark dark:text-white">
-            Data Sekolah
-          </h3>
-          <p class="font-mediu text-base text-secondary">
-            Membuat data sekolah ekstrakurikuler
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Portfolio Section End -->
-
-  <!-- client Section Start -->
-  <section id="clients" class="bg-slate-800 pb-32 pt-36 dark:bg-slate-300">
-    <div class="container">
-      <div class="w-full px-4">
-        <div class="mx-auto mb-16 text-center">
-          <h4 class="mb-2 text-lg font-semibold text-primary" data-aos="fade-up" data-aos-duration="1000">Clients</h4>
-          <h2 class="mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl dark:text-dark" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">
-            Yang Pernah Bekerjasama
-          </h2>
-          <p class="text-md font-medium text-secondary md:text-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="400">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-            unde earum enim.
-          </p>
-        </div>
-      </div>
-
-      <div class="w-full px-4">
-        <div class="flex flex-wrap items-center justify-center">
-          <div class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-            <a href="#">
-            <img src="dist/img/clients/Google.svg" alt="Google" />
-            </a>
-          </div>
-          <div class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-            <a href="#">
-            <img src="dist/img/clients/Gojek.svg" alt="Gojek" />
-            </a>
-          </div> 
-          <div class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-            <a href="#">
-            <img src="dist/img/clients/Tokopedia.svg" alt="Tokopedia" />
-            </a>
-          </div>
-          <div class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
-            <a href="#">
-            <img src="dist/img/clients/traveloka.svg" alt="Traveloka" />
-          </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- client Section End -->
-
-  <!-- blog section Start -->
-  <!-- <section id="blog" class="bg-slate-100 pb-32 pt-36 dark:bg-dark">
-    <div class="container">
-      <div class="w-full px-4">
-        <div class="mx-auto mb-16 max-w-xl text-center">
-          <h4 class="mb-2 text-lg font-semibold text-primary">Blog</h4>
-          <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-white">
-            Tulisan Terkini
-          </h2>
-          <p class="text-md font-medium text-secondary md:text-lg">
-            Berikut adalah sebuah kutipan data pada blog yang mana blog ini memberikan informasi terkait seputar teknologi
-          </p>
-        </div>
-
-        <div class="flex flex-wrap">
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
-              <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Programming" class="w-full" />
-              <div class="px-6 py-8">
-                <h3>
-                  <a href="#"
-                    class="mb-3 block truncate font-semibold text-dark transition duration-300 ease-in-out hover:text-primary dark:text-white dark:hover:text-primary">Tips
-                    Belajar Programming</a>
-                </h3>
-                <p class="mb-6 text-base font-medium text-secondary truncate">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Expedita velit quos sint!
-                </p>
-                <a href="#"
-                  class="rounded-md bg-primary px-2 py-2 font-medium text-white transition duration-300 ease-in-out hover:opacity-80">Baca
-                  Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
-              <img src="https://images.unsplash.com/photo-1555532538-dcdbd01d373d?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Machanical Keyboard"
-                class="w-full" />
-              <div class="px-6 py-8">
-                <h3>
-                  <a href="#"
-                    class="mb-3 block truncate font-semibold text-dark transition duration-300 ease-in-out hover:text-primary dark:text-white dark:hover:text-primary">Review
-                    Keyboard GMMK Pro</a>
-                </h3>
-                <p class="mb-6 text-base font-medium text-secondary truncate">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Similique laborum quae cum.
-                </p>
-                <a href="#"
-                  class="rounded-md bg-primary px-2 py-2 font-medium text-white transition duration-300 ease-in-out hover:opacity-80">Baca
-                  Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
-              <img src="https://images.unsplash.com/photo-1622647306301-176abdc3f209?q=80&w=2149&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Programming" class="w-full" />
-              <div class="px-6 py-8">
-                <h3>
-                  <a href="#"
-                    class="mb-3 block truncate font-semibold text-dark transition duration-300 ease-in-out hover:text-primary dark:text-white dark:hover:text-primary">Menikmati
-                    Secangkir Kopi</a>
-                </h3>
-                <p class="mb-6 text-base font-medium text-secondary truncate">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
-                  reprehenderit quos tenetur.
-                </p>
-                <a href="#"
-                  class="rounded-md bg-primary px-2 py-2 font-medium text-white transition duration-300 ease-in-out hover:opacity-80">Baca
-                  Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-  <!-- blog section End -->
-
-      <!-- Contact Section Start -->
-    <section id="contact" class="pt-36 bg-slate-100 dark:bg-slate-800">
-    <div class="container mx-auto px-4">
-        <div class="text-center max-w-xl mx-auto mb-16">
-        <h4 class="text-primary text-lg font-semibold mb-2">Contact</h4>
-        <h2 class="text-4xl font-bold text-dark dark:text-white mb-4">Hubungi Saya</h2>
-        <p class="text-secondary text-md md:text-lg">
-            Ingin bekerja sama atau bertanya? Hubungi saya melalui kontak di bawah ini.
+        <!-- <p>
+          Menjadi sukses di usia muda adalah pencapaian yang luar
+          <span class="biasa">biasa!</span>
+        </p> -->
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, totam?
+          Doloribus quasi nemo, commodi quas corporis officia eos voluptatibus
+          similique?
         </p>
+        <div class="btn-sci">
+          <a href="#" class="btn">Unduh CV</a>
+          <div class="sci">
+            <a href="#"><i class="bx bxl-github"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+          </div>
         </div>
+      </div>
 
-        <div class="flex justify-center py-5">
-            <!-- Card Email -->
-            <div class="dark:bg-slate-800 bg-slate-100 rounded-2xl shadow-md p-6 text-center transition hover:shadow-xl px-4">
-                <div class="flex justify-center mb-4">
-                <div class="bg-primary/10 text-primary p-4 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                      <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-                      <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-                    </svg>
-                </div>
-                </div>
-                <h4 class="text-xl font-semibold text-dark dark:text-white mb-1">Email</h4>
-                <p class="text-secondary text-sm">nandakamarulzaman@email.com</p>
-            </div>
-            <!-- Card Telepon -->
-            <div class="dark:bg-slate-800 bg-slate-100 rounded-2xl shadow-md p-6 text-center transition hover:shadow-xl px-4">
-                <div class="flex justify-center mb-4">
-                <div class="bg-primary/10 text-primary p-4 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                    <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                </div>
-                <h4 class="text-xl font-semibold text-dark dark:text-white mb-1">Telepon</h4>
-                <p class="text-secondary text-sm">+62 895-6051-22329</p>
-            </div>
-            <!-- Card Lokasi -->
-            <div class="dark:bg-slate-800 bg-slate-100 rounded-2xl shadow-md p-6 text-center transition hover:shadow-xl px-4">
-                <div class="flex justify-center mb-4">
-                <div class="bg-primary/10 text-primary p-4 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                    <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                </div>
-                <h4 class="text-xl font-semibold text-dark dark:text-white mb-1">Alamat</h4>
-                <p class="text-secondary text-sm">Jl. Mad Tamin Kp. Cikadu</p>
-            </div>
+      <!-- home image -->
+      <div class="home-img">
+        <div class="img-box">
+          <div class="img-item">
+            <img src="img/nanda.png" />
+          </div>
         </div>
-    </div>
+      </div>
     </section>
-    <!-- Contact Section End -->
-
-
-  <!-- Footer Section Start -->
-  <footer class="bg-dark pb-12 pt-24">
-    <div class="container">
-      <div class="flex flex-wrap">
-        <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
-          <h2 class="mb-5 text-4xl font-bold text-white">NKZ</h2>
-          <h3 class="mb-2 text-2xl font-bold">Hubungi Kami</h3>
-          <p>nandakamarulzaman@gmail.com</p>
-          <p>Jl.Mad Tamin 12</p>
-          <p>Sukabumi</p>
+    <!-- home end section -->
+    <!-- -------------------------------------------------------------------------------------------------- -->
+    <!-- serives section -->
+    <section class="services">
+      <h2 class="heading">
+        My
+        <span>Services</span>
+      </h2>
+      <div class="services-container">
+        <div class="services-box">
+          <div class="icon">
+            <i class="bx bx-code-alt"></i>
+            <a href="#"><i class="bx bx-arrow-back"></i></a>
+          </div>
+          <h3>Web Development</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            eum expedita nisi excepturi nemo id.
+          </p>
         </div>
 
-        <div class="mb-12 w-full px-4 md:w-1/3">
-          <h3 class="mb-5 text-xl font-semibold text-white">
-            Kategori Tulisan
-          </h3>
-          <ul class="text-slate-300">
-            <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-primary hover:underline">Programming</a>
-            </li>
-            <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-primary hover:underline">Teknologi</a>
-            </li>
-            <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-primary hover:underline">Gaya Hidup</a>
-            </li>
-          </ul>
+        <div class="services-box">
+          <div class="icon">
+            <i class="bx bxs-paint"></i>
+            <a href="#"><i class="bx bx-arrow-back"></i></a>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            eum expedita nisi excepturi nemo id.
+          </p>
         </div>
 
-        <div class="mb-12 w-full px-4 md:w-1/3">
-          <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
-          <ul class="text-slate-300">
-            <li>
-              <a href="#home" class="mb-3 inline-block text-base hover:text-primary hover:underline">Beranda</a>
-            </li>
-            <li>
-              <a href="#about" class="mb-3 inline-block text-base hover:text-primary hover:underline">Tentang Saya</a>
-            </li>
-            <li>
-              <a href="#portfolio" class="mb-3 inline-block text-base hover:text-primary hover:underline">Portfolio</a>
-            </li>
-            <li>
-              <a href="#clients" class="mb-3 inline-block text-base hover:text-primary hover:underline">Clients</a>
-            </li>
-            <li>
-              <a href="#blog" class="mb-3 inline-block text-base hover:text-primary hover:underline">Blog</a>
-            </li>
-            <li>
-              <a href="#contact" class="mb-3 inline-block text-base hover:text-primary hover:underline">Contact</a>
-            </li>
-          </ul>
+        <div class="services-box">
+          <div class="icon">
+            <i class="bx bx-palette"></i>
+            <a href="#"><i class="bx bx-arrow-back"></i></a>
+          </div>
+          <h3>Graphic Design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            eum expedita nisi excepturi nemo id.
+          </p>
+        </div>
+
+        <div class="services-box">
+          <div class="icon">
+            <i class="bx bx-slideshow"></i>
+            <a href="#"><i class="bx bx-arrow-back"></i></a>
+          </div>
+          <h3>Video Editing</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            eum expedita nisi excepturi nemo id.
+          </p>
+        </div>
+
+        <div class="services-box">
+          <div class="icon">
+            <i class="bx bx-camera"></i>
+            <a href="#"><i class="bx bx-arrow-back"></i></a>
+          </div>
+          <h3>Photography</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            eum expedita nisi excepturi nemo id.
+          </p>
         </div>
       </div>
-
-      <div class="w-full border-t border-slate-700 pt-10">
-        <div class="mb-5 flex items-center justify-center">
-          <!-- youtube -->
-          <a href="https://www.youtube.com/@nanda4356" target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white">
-            <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>YouTube</title>
-              <path
-                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-            </svg>
-          </a>
-
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/kz.nanda/" target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white">
-            <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>Instagram</title>
-              <path
-                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
-            </svg>
-          </a>
-
-          <!-- Facebook -->
-          <a href="https://web.facebook.com/nanda.k.zaman/" target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white">
-            <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>Facebook</title>
-              <path
-                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-            </svg>
-          </a>
-
-          <!-- Twitter -->
-          <a href="https://twitter.com/nanda_kz" target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white">
-            <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>Twitter</title>
-              <path
-                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-            </svg>
-          </a>
-
-          <!-- Tiktok -->
-          <a href="https://www.tiktok.com/@nandakz2510" target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white">
-            <svg width="20" class="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <title>TikTok</title>
-              <path
-                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
-            </svg>
-          </a>
+    </section>
+    <!-- serives end section -->
+    <!-- -------------------------------------------------------------------------------------------------- -->
+    <!-- resume section -->
+    <section class="resume">
+      <div class="resume-container">
+        <div class="resume-box">
+          <h2>Why Hire Me ?</h2>
+          <p class="desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
+            eaque dolor exercitationem. Asperiores, labore recusandae.
+          </p>
+          <button class="resume-btn active">Experience</button>
+          <button class="resume-btn">Education</button>
+          <button class="resume-btn">Skills</button>
+          <button class="resume-btn">About Me</button>
         </div>
-        <p class="text-center text-xs font-medium text-slate-500">
-          Dibuat dengan <span>❤️</span> oleh
-          <a href="https://instagram.com/kz.nanda" target="_blank" class="font-bold text-teal-400 hover:underline">Nanda
-            Kamarul Zaman</a>, menggunakan
-          <a href="https://tailwindcss.com/" target="_blank" class="font-bold text-primary hover:underline">Tailwind
-            CSS</a>
-        </p>
+        <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+        <div class="resume-box">
+          <div class="resume-detail experience active">
+            <h2 class="heading">
+              My
+              <span>Experience</span>
+            </h2>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Doloribus inventore porro, qui quasi rerum ipsa itaque officia id
+              tempora nemo.
+            </p>
+            <div class="resume-list">
+              <div class="resume-item">
+                <p class="year">2023 - present</p>
+                <h3>Full Stack Developer</h3>
+                <p class="company">SMP IT Hayatan Thayyibah</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ratione harum ex minima impedit itaque laboriosam?
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2022 - present</p>
+                <h3>Frontend Developer</h3>
+                <p class="company">Freelancer</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ratione harum ex minima impedit itaque laboriosam?
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2022 - 2022</p>
+                <h3>UI/UX Design</h3>
+                <p class="company">PT Storeel Indonesia</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ratione harum ex minima impedit itaque laboriosam?
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2021 - 2021</p>
+                <h3>Employee</h3>
+                <p class="company">Kebab Ahsan</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ratione harum ex minima impedit itaque laboriosam?
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2021 - 2021</p>
+                <h3>Employee</h3>
+                <p class="company">Kebab Ahsan</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ratione harum ex minima impedit itaque laboriosam?
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2021 - 2021</p>
+                <h3>Employee</h3>
+                <p class="company">Kebab Ahsan</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ratione harum ex minima impedit itaque laboriosam?
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+          <div class="resume-detail education">
+            <h2 class="heading">
+              My
+              <span>Education</span>
+            </h2>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Doloribus inventore porro, qui quasi rerum ipsa itaque officia id
+              tempora nemo.
+            </p>
+            <div class="resume-list">
+              <div class="resume-item">
+                <p class="year">2020 - 2023</p>
+                <h3>Computer Engineering</h3>
+                <p class="company">Politeknik Sukabumi</p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Tempora, iste!
+                </p>
+              </div>
+              <div class="resume-item">
+                <p class="year">2017 - 2020</p>
+                <h3>Natural Science</h3>
+                <p class="company">SMA Al-Kholiliyah</p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Tempora, iste!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+          <div class="resume-detail skills">
+            <h2 class="heading">
+              My
+              <span>Skills</span>
+            </h2>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Doloribus inventore porro, qui quasi rerum ipsa itaque officia id
+              tempora nemo.
+            </p>
+            <div class="resume-list">
+              <div class="resume-item">
+                <i class="bx bxl-html5"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="resume-item">
+                <i class="bx bxl-css3"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="resume-item">
+                <i class="fa-brands fa-php"></i>
+                <span>PHP</span>
+              </div>
+              <div class="resume-item">
+                <i class="bx bxl-javascript"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="resume-item">
+                <i class="fa-brands fa-laravel"></i>
+                <span>Laravel</span>
+              </div>
+              <div class="resume-item">
+                <i class="bx bxl-react"></i>
+                <span>React.JS</span>
+              </div>
+              <div class="resume-item">
+                <i class="bx bxl-bootstrap"></i>
+                <span>Bootstrap</span>
+              </div>
+              <div class="resume-item">
+                <i class="bx bxl-tailwind-css"></i>
+                <span>Tailwind CSS</span>
+              </div>
+            </div>
+          </div>
+          <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+
+          <div class="resume-detail about">
+            <h2 class="heading">
+              About
+              <span>Me</span>
+            </h2>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Doloribus inventore porro, qui quasi rerum ipsa itaque officia id
+              tempora nemo.
+            </p>
+            <div class="resume-list">
+              <div class="resume-item">
+                <p>
+                  Name
+                  <span>Nanda Kamarul Zaman</span>
+                </p>
+              </div>
+              <div class="resume-item">
+                <p>
+                  Gender
+                  <span>Male</span>
+                </p>
+              </div>
+              <div class="resume-item">
+                <p>
+                  Age
+                  <span>23 Years Old</span>
+                </p>
+              </div>
+              <div class="resume-item">
+                <p>
+                  Status
+                  <span>Unmarried</span>
+                </p>
+              </div>
+              <div class="resume-item">
+                <p>
+                  City
+                  <span>Sukabumi</span>
+                </p>
+              </div>
+              <div class="resume-item">
+                <p>
+                  Nationality
+                  <span>Indonesia</span>
+                </p>
+              </div>
+              <div class="resume-item">
+                <p>
+                  Experience
+                  <span>4+ Years</span>
+                </p>
+              </div>
+              <div class="resume-item">
+                <p>
+                  Full Time
+                  <span>Available</span>
+                </p>
+              </div>
+              <div class="resume-item">
+                <p>
+                  Freelance
+                  <span>Available</span>
+                </p>
+              </div>
+              <div class="resume-item">
+                <p>
+                  Phone
+                  <span>(+62) 838-9153-1964</span>
+                </p>
+              </div>
+              <div class="resume-item">
+                <p>
+                  Email
+                  <span>nandakamarulzaman@gmail.com</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
-  <!-- Footer Section End -->
+    </section>
+    <!-- resume end section -->
+    <!-- -------------------------------------------------------------------------------------------------- -->
+    <!-- portfolio section -->
+    <section class="portfolio">
+      <h2 class="heading">
+        Latest
+        <span>Project</span>
+      </h2>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <div class="portfolio-detail active">
+            <p class="numb">01</p>
+            <h3>School Website</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,
+              dolorem quaerat! Natus ea esse modi quo hic? Molestiae, earum
+              provident.
+            </p>
+            <div class="tech">
+              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
+            </div>
+            <div class="live-github">
+              <a href="#">
+                <i class="bx bx-arrow-back"></i>
+                <span>Live Project</span>
+              </a>
+              <a href="#">
+                <i class="bx bxl-github"></i>
+                <span>Github Repository</span>
+              </a>
+            </div>
+          </div>
 
-  <!-- Back to top Start -->
-  <a href="#home"
-    class="fixed bottom-4 right-4 z-[9999] hidden h-10 w-10 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse"
-    id="to-top"><span class=""><i class="fa-solid fa-arrow-up text-white"></i></span>
-  </a>
-  <!-- Back to top End -->
+          <div class="portfolio-detail">
+            <p class="numb">02</p>
+            <h3>E-Learning</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,
+              dolorem quaerat! Natus ea esse modi quo hic? Molestiae, earum
+              provident.
+            </p>
+            <div class="tech">
+              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
+            </div>
+            <div class="live-github">
+              <a href="#">
+                <i class="bx bx-arrow-back"></i>
+                <span>Live Project</span>
+              </a>
+              <a href="#">
+                <i class="bx bxl-github"></i>
+                <span>Github Repository</span>
+              </a>
+            </div>
+          </div>
 
-  <script src="dist/js/script.js"></script>
+          <div class="portfolio-detail">
+            <p class="numb">03</p>
+            <h3>PPDB Test</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,
+              dolorem quaerat! Natus ea esse modi quo hic? Molestiae, earum
+              provident.
+            </p>
+            <div class="tech">
+              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
+            </div>
+            <div class="live-github">
+              <a href="#">
+                <i class="bx bx-arrow-back"></i>
+                <span>Live Project</span>
+              </a>
+              <a href="#">
+                <i class="bx bxl-github"></i>
+                <span>Github Repository</span>
+              </a>
+            </div>
+          </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      once: true
-    });
-  </script>
-</body>
+          <div class="portfolio-detail">
+            <p class="numb">04</p>
+            <h3>Guestbook</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,
+              dolorem quaerat! Natus ea esse modi quo hic? Molestiae, earum
+              provident.
+            </p>
+            <div class="tech">
+              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
+            </div>
+            <div class="live-github">
+              <a href="#">
+                <i class="bx bx-arrow-back"></i>
+                <span>Live Project</span>
+              </a>
+              <a href="#">
+                <i class="bx bxl-github"></i>
+                <span>Github Repository</span>
+              </a>
+            </div>
+          </div>
 
+          <div class="portfolio-detail">
+            <p class="numb">05</p>
+            <h3>Digital Attendance</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,
+              dolorem quaerat! Natus ea esse modi quo hic? Molestiae, earum
+              provident.
+            </p>
+            <div class="tech">
+              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
+            </div>
+            <div class="live-github">
+              <a href="#">
+                <i class="bx bx-arrow-back"></i>
+                <span>Live Project</span>
+              </a>
+              <a href="#">
+                <i class="bx bxl-github"></i>
+                <span>Github Repository</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="portfolio-detail">
+            <p class="numb">06</p>
+            <h3>Convection Website</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid,
+              dolorem quaerat! Natus ea esse modi quo hic? Molestiae, earum
+              provident.
+            </p>
+            <div class="tech">
+              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
+            </div>
+            <div class="live-github">
+              <a href="#">
+                <i class="bx bx-arrow-back"></i>
+                <span>Live Project</span>
+              </a>
+              <a href="#">
+                <i class="bx bxl-github"></i>
+                <span>Github Repository</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <!-- image carousel -->
+          <div class="portfolio-carousel">
+            <div class="img-slide">
+              <div class="img-item">
+                <img src="img/portfolio/webSekolah.png" alt="" />
+              </div>
+              <div class="img-item">
+                <img src="img/portfolio/e-learning.png" alt="" />
+              </div>
+              <div class="img-item">
+                <img src="img/portfolio/ppdb-test.png" alt="" />
+              </div>
+              <div class="img-item">
+                <img src="img/portfolio/buku-tamu.png" alt="" />
+              </div>
+              <div class="img-item">
+                <img src="img/portfolio/absensi.png" alt="" />
+              </div>
+              <div class="img-item">
+                <img src="img/portfolio/konveksi.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="navigation">
+            <button class="arrow-left disabled">
+              <i class="bx bxs-chevron-left"></i>
+            </button>
+            <button class="arrow-right">
+              <i class="bx bx-arrow-left"></i>
+              <i class="bx bxs-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio end section -->
+    <!-- -------------------------------------------------------------------------------------------------- -->
+    <!-- section contact -->
+    <section class="contact">
+      <div class="contact-container">
+        <div class="contact-box">
+          <h2>Let's Work Together</h2>
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
+            possimus magni, eveniet necessitatibus nisi nobis!
+          </p>
+          <div class="contact-detail">
+            <i class="bx bxs-phone"></i>
+            <div class="detail">
+              <p>Phone</p>
+              <p>(+62) 838-9153-1964</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="bx bxs-envelope"></i>
+            <div class="detail">
+              <p>Email</p>
+              <p>nandakamarulzaman@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="bx bxs-map"></i>
+            <div class="detail">
+              <p>Address</p>
+              <p>(+62) 838-9153-1964</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <form action="">
+            <h2 class="heading">
+              Contact
+              <span>Me!</span>
+            </h2>
+            <div class="field-box">
+              <input type="text" placeholder="Full Name" required />
+              <input type="email" placeholder="Email Address" required />
+              <input type="text" placeholder="Phone Number" required />
+              <input type="text" placeholder="Email Subject" required />
+              <textarea
+                name=""
+                id=""
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- section end contact -->
+
+    <!-- custom script -->
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -126,25 +126,23 @@ nav a.active {
 section {
   position: absolute;
   width: 100%;
-  min-height: 100%; /* Diubah dari height ke min-height */
+  min-height: 100%;
   padding: 10rem 9% 2rem;
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
-  top: 0;
-  left: 0;
 }
 
 section.active {
-  animation: show-content 1.5s linear forwards; /* Nama disesuaikan */
+  animation: show-content 1.5s linear forwards;
   animation-delay: 1.2s;
-  overflow-y: auto; /* Lebih spesifik */
 }
 
 @keyframes show-content {
   100% {
     visibility: visible;
     opacity: 1;
+    overflow: auto;
   }
 }
 

@@ -802,6 +802,46 @@ section.active {
   margin-top: 2rem;
   cursor: pointer;
 }
+
+/* Style untuk pesan sukses */
+.form-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  animation: fadeIn 0.5s;
+}
+
+.form-message i {
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Style untuk tombol loading */
+.bx-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* * --------------------------------------------------- CONTACT END--------------------------------------------------------------------- */
 
 /* ukuran breakPoints */

@@ -128,3 +128,55 @@ arrowLeft.addEventListener("click", () => {
 
   activePortfolio();
 });
+
+// -------------------------------------------------------------------------------------------------------------
+// Handle form submission
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+
+    // Tampilkan loading
+    submitBtn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Sending...';
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        // Tampilkan SweetAlert sukses
+        Swal.fire({
+          icon: "success",
+          title: "Success!",
+          text: "Your message has been sent to nandakamarulzaman@gmail.com",
+          confirmButtonColor: "#4CAF50",
+          timer: 3000,
+        });
+
+        form.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      // Tampilkan SweetAlert error
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Failed to send message. Please try again later.",
+        confirmButtonColor: "#F44336",
+      });
+    } finally {
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }
+  });

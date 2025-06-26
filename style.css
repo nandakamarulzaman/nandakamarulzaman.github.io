@@ -498,6 +498,11 @@ section.active {
   margin-bottom: 2rem;
 }
 
+.resume-item p:last-child {
+  font-size: 1.4rem;
+  text-align: justify;
+}
+
 .resume-item .company::before {
   content: "";
   position: absolute;

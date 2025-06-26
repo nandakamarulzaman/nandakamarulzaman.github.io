@@ -158,7 +158,7 @@ document
         Swal.fire({
           icon: "success",
           title: "Success!",
-          text: "Your message has been sent to nandakamarulzaman@gmail.com",
+          text: "Your message has been sent to nandakamarulzaman01@gmail.com",
           confirmButtonColor: "#4CAF50",
           timer: 3000,
         });

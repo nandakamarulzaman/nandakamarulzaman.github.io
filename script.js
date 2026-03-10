@@ -83,10 +83,10 @@ resumeBtns.forEach((btn, idx) => {
 
 // portfolio
 const arrowRight = document.querySelector(
-  ".portfolio-box .navigation .arrow-right"
+  ".portfolio-box .navigation .arrow-right",
 );
 const arrowLeft = document.querySelector(
-  ".portfolio-box .navigation .arrow-left"
+  ".portfolio-box .navigation .arrow-left",
 );
 
 let index = 0;

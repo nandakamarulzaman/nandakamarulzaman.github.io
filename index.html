@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portopolio - Nanda Kamarul Zaman</title>
+    <title>Nanda Kamarul Zaman — Creative Developer</title>
 
-    <!-- boxicons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
-
-    <link rel="shortcut icon" href="img/logoMe.jpeg" type="image/x-icon" />
-
-    <!-- font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -19,30 +21,22 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- custom css -->
+    <link rel="shortcut icon" href="img/logoMe.jpeg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Tambahkan ini sebelum CSS lainnya -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
-    <!-- header -->
-    <header class="active">
-      <!-- logo -->
-      <a href="javascript:void();" class="logo">NKZ😎</a>
-      <!-- icon menu -->
-      <i class="bx bx-menu-alt-right" id="menu-icon"></i>
-      <nav>
-        <a href="javascript:void();" class="active">Home</a>
-        <a href="javascript:void();">Services</a>
-        <a href="javascript:void();">Resume</a>
-        <a href="javascript:void();">Portfolio</a>
-        <a href="javascript:void();">Contact</a>
-      </nav>
-    </header>
-    <!-- end header -->
+    <!-- Ambient background -->
+    <div class="ambient-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+      <div class="noise-overlay"></div>
+    </div>
 
-    <div class="bars-box active">
+    <!-- Bars loader -->
+    <div class="bars-box">
       <div class="bar" style="--i: 6"></div>
       <div class="bar" style="--i: 5"></div>
       <div class="bar" style="--i: 4"></div>
@@ -50,625 +44,662 @@
       <div class="bar" style="--i: 2"></div>
       <div class="bar" style="--i: 1"></div>
     </div>
-    <!-- -------------------------------------------------------------------------------------------------- -->
-    <!-- home section -->
-    <section class="home active">
-      <div class="home-detail">
-        <h5>Hello Everyone, 👋 I'm</h5>
-        <h1>Nanda Kamarul Zaman</h1>
-        <h2>
-          I'm a
-          <span style="--i: 4" data-text="Design">Design</span>
-          <span style="--i: 3" data-text="Videographer">Videographer</span>
-          <span style="--i: 2" data-text="Freelancer">Freelancer</span>
-          <span style="--i: 1" data-text="Web Developer">Web Developer</span>
-        </h2>
 
-        <p>
-          From building my first website at age 19 to now developing school systems,
-          <span class="biasa">every line of code</span>
-          tells a story of
-          <span class="biasa">continuous growth</span>
-          .
-        </p>
+    <!-- Header -->
+    <header class="active">
+      <a href="javascript:void(0)" class="logo">
+        <span class="logo-mark">NKZ</span>
+        <span class="logo-dot"></span>
+      </a>
+      <i class="bx bx-menu-alt-right" id="menu-icon"></i>
+      <nav>
+        <a href="javascript:void(0)" class="active">Home</a>
+        <a href="javascript:void(0)">Services</a>
+        <a href="javascript:void(0)">Resume</a>
+        <a href="javascript:void(0)">Portfolio</a>
+        <a href="javascript:void(0)">Contact</a>
+      </nav>
+    </header>
 
-        <div class="btn-sci">
-          <a
-            href="https://drive.google.com/file/d/1Q4Amg9b3LyxZzTrGwqwGBwPK_AuXz8w_/view?usp=sharing"
-            target="_blank"
-            class="btn"
-          >
-            Download CV
-          </a>
-          <div class="sci">
-            <a href="https://github.com/nandakamarulzaman" target="_blank">
-              <i class="bx bxl-github"></i>
+    <main class="pages">
+      <!-- ============================== HOME ============================== -->
+      <section class="home active">
+        <div class="home-detail">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Available for freelance work
+          </div>
+          <h5>Hello, I'm</h5>
+          <h1>
+            Nanda
+            <span class="gradient-text">Kamarul Zaman</span>
+          </h1>
+
+          <h2>
+            I'm a
+            <span style="--i: 4" data-text="Design">Design</span>
+            <span style="--i: 3" data-text="Videographer">Videographer</span>
+            <span style="--i: 2" data-text="Freelancer">Freelancer</span>
+            <span style="--i: 1" data-text="Web Developer">Web Developer</span>
+          </h2>
+
+          <p>
+            From building my first website at age 19 to now developing school systems —
+            <span class="biasa">every line of code</span>
+            tells a story of
+            <span class="biasa">continuous growth</span>
+            .
+          </p>
+
+          <div class="btn-sci">
+            <a
+              href="https://drive.google.com/file/d/1Q4Amg9b3LyxZzTrGwqwGBwPK_AuXz8w_/view?usp=sharing"
+              target="_blank"
+              class="btn btn-primary"
+            >
+              <i class="bx bx-download"></i>
+              Download CV
             </a>
-            <a href="https://www.linkedin.com/in/nanda-kamarul-zaman/" target="_blank">
-              <i class="bx bxl-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/kz.nanda/" target="_blank">
-              <i class="bx bxl-instagram"></i>
-            </a>
-            <a href="https://www.youtube.com/@nanda4356" target="_blank">
-              <i class="bx bxl-youtube"></i>
-            </a>
+            <div class="sci">
+              <a href="https://github.com/nandakamarulzaman" target="_blank"><i class="bx bxl-github"></i></a>
+              <a href="https://www.linkedin.com/in/nanda-kamarul-zaman/" target="_blank">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com/kz.nanda/" target="_blank"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.youtube.com/@nanda4356" target="_blank"><i class="bx bxl-youtube"></i></a>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <!-- home image -->
-      <div class="home-img">
-        <div class="img-box">
-          <div class="img-item">
-            <img src="img/nanda.jpeg" />
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-num" data-target="4">0</span>
+              <span class="stat-suffix">+</span>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="15">0</span>
+              <span class="stat-suffix">+</span>
+              <p>Projects Done</p>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-target="10">0</span>
+              <span class="stat-suffix">+</span>
+              <p>Happy Clients</p>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <!-- home end section -->
-    <!-- -------------------------------------------------------------------------------------------------- -->
-    <!-- serives section -->
-    <section class="services">
-      <h2 class="heading">
-        My
-        <span>Services</span>
-      </h2>
-      <div class="services-container">
-        <div class="services-box">
-          <div class="icon">
-            <i class="bx bx-code-alt"></i>
-            <a href="#"><i class="bx bx-arrow-back"></i></a>
-          </div>
-          <h3>Web Development</h3>
-          <p>
-            Web Development is the process of creating websites and web applications that run on the internet. This
-            process involves a combination of programming, design, and content creation.
-          </p>
         </div>
 
-        <div class="services-box">
-          <div class="icon">
-            <i class="bx bxs-paint"></i>
-            <a href="#"><i class="bx bx-arrow-back"></i></a>
+        <div class="home-img">
+          <div class="img-box">
+            <div class="img-glow"></div>
+            <div class="img-item">
+              <img src="img/nanda.jpeg" alt="Nanda Kamarul Zaman" />
+            </div>
+            <div class="floating-chip chip-1">
+              <i class="bx bx-code-alt"></i>
+              Developer
+            </div>
+            <div class="floating-chip chip-2">
+              <i class="bx bx-palette"></i>
+              Designer
+            </div>
+            <div class="floating-chip chip-3">
+              <i class="bx bx-camera"></i>
+              Creator
+            </div>
           </div>
-          <h3>UI/UX Design</h3>
-          <p>
-            UI/UX Design is the process of creating user interfaces that are visually appealing and functional for
-            applications and websites. It involves user research, testing, and design iteration.
-          </p>
         </div>
 
-        <div class="services-box">
-          <div class="icon">
-            <i class="bx bx-palette"></i>
-            <a href="#"><i class="bx bx-arrow-back"></i></a>
-          </div>
-          <h3>Graphic Design</h3>
-          <p>
-            Graphic Design is the process of creating visual content for communication. It involves the use of
-            typography, imagery, and other design elements to convey messages.
-          </p>
+        <div class="scroll-indicator">
+          <span>Scroll</span>
+          <i class="bx bx-mouse"></i>
         </div>
+      </section>
 
-        <div class="services-box">
-          <div class="icon">
-            <i class="bx bx-slideshow"></i>
-            <a href="#"><i class="bx bx-arrow-back"></i></a>
+      <!-- ============================== SERVICES ============================== -->
+      <section class="services">
+        <div class="section-header">
+          <span class="section-tag">What I Offer</span>
+          <h2 class="heading">
+            My
+            <span>Services</span>
+          </h2>
+        </div>
+        <div class="services-container">
+          <div class="services-box">
+            <div class="icon">
+              <i class="bx bx-code-alt"></i>
+              <a href="#"><i class="bx bx-arrow-back"></i></a>
+            </div>
+            <h3>Web Development</h3>
+            <p>Building modern, responsive, and performant web applications using Laravel, React, and Tailwind CSS.</p>
           </div>
-          <h3>Video Editing</h3>
-          <p>
-            Video Editing is the process of editing and manipulating video footage to create an engaging final product.
-            It involves cutting, arranging, and adding visual and audio effects.
-          </p>
-        </div>
-
-        <div class="services-box">
-          <div class="icon">
-            <i class="bx bx-camera"></i>
-            <a href="#"><i class="bx bx-arrow-back"></i></a>
-          </div>
-          <h3>Photography</h3>
-          <p>
-            Photography is the art and practice of creating images by capturing light, either electronically using a
-            digital camera or chemically using film. It involves composition, lighting, and editing to produce
-            compelling images.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- serives end section -->
-    <!-- -------------------------------------------------------------------------------------------------- -->
-    <!-- resume section -->
-    <section class="resume">
-      <div class="resume-container">
-        <div class="resume-box">
-          <h2>Why Hire Me</h2>
-          <p class="desc">
-            I combine the creativity of designers with the logic of programmers, allowing me to create digital solutions
-            that are not only functional but also aesthetically pleasing. My multidisciplinary expertise (UI/UX, Web
-            Dev, Videography) allows me to see projects from multiple perspectives.
-          </p>
-          <button class="resume-btn active">Experience</button>
-          <button class="resume-btn">Education</button>
-          <button class="resume-btn">Skills</button>
-          <button class="resume-btn">Profile</button>
-        </div>
-        <!-- ---------------------------------------------------------------------------------------------------------------------- -->
-        <div class="resume-box">
-          <div class="resume-detail experience active">
-            <h2 class="heading">
-              My
-              <span>Experience</span>
-            </h2>
-            <p class="desc">
-              My experience includes working as a Full Stack Developer at SMP IT Hayatan Thayyibah, where I developed
-              and maintained school information systems, and as a Frontend Developer freelancer, creating responsive
-              user interfaces for various clients.
+          <div class="services-box">
+            <div class="icon">
+              <i class="bx bxs-paint"></i>
+              <a href="#"><i class="bx bx-arrow-back"></i></a>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>
+              Designing intuitive interfaces with a strong focus on user research, accessibility, and visual appeal.
             </p>
-            <div class="resume-list">
-              <div class="resume-item">
-                <p class="year">2023 - present</p>
-                <h3>Full Stack Developer</h3>
-                <p class="company">SMP IT Hayatan Thayyibah</p>
-                <p>
-                  Develop and maintain school information systems including PPDB, e-learning, digital attendance, guest
-                  book, infrastructure, and correspondence modules using Laravel and Bootstrap.
-                </p>
+          </div>
+          <div class="services-box">
+            <div class="icon">
+              <i class="bx bx-palette"></i>
+              <a href="#"><i class="bx bx-arrow-back"></i></a>
+            </div>
+            <h3>Graphic Design</h3>
+            <p>Crafting visual identities, social media assets, and brand collateral with a modern aesthetic.</p>
+          </div>
+          <div class="services-box">
+            <div class="icon">
+              <i class="bx bx-slideshow"></i>
+              <a href="#"><i class="bx bx-arrow-back"></i></a>
+            </div>
+            <h3>Video Editing</h3>
+            <p>Editing promotional and educational videos with dynamic cuts, sound design, and visual effects.</p>
+          </div>
+          <div class="services-box">
+            <div class="icon">
+              <i class="bx bx-camera"></i>
+              <a href="#"><i class="bx bx-arrow-back"></i></a>
+            </div>
+            <h3>Photography</h3>
+            <p>Capturing moments with a creative eye — from portraits to product photography and events.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== RESUME ============================== -->
+      <section class="resume">
+        <div class="section-header">
+          <span class="section-tag">My Journey</span>
+          <h2 class="heading">
+            Resume &
+            <span>Experience</span>
+          </h2>
+        </div>
+        <div class="resume-container">
+          <aside class="resume-sidebar">
+            <div class="why-hire">
+              <h3>Why Hire Me</h3>
+              <p>
+                I combine the creativity of designers with the logic of programmers, creating digital solutions that are
+                functional and beautiful.
+              </p>
+            </div>
+            <div class="resume-tabs">
+              <button class="resume-btn active" data-tab="experience">
+                <i class="bx bx-briefcase"></i>
+                Experience
+              </button>
+              <button class="resume-btn" data-tab="education">
+                <i class="bx bx-book"></i>
+                Education
+              </button>
+              <button class="resume-btn" data-tab="skills">
+                <i class="bx bx-code-block"></i>
+                Skills
+              </button>
+              <button class="resume-btn" data-tab="about">
+                <i class="bx bx-user"></i>
+                Profile
+              </button>
+            </div>
+          </aside>
+
+          <div class="resume-content">
+            <div class="resume-detail experience active">
+              <h2 class="heading">
+                My
+                <span>Experience</span>
+              </h2>
+              <p class="desc">
+                Working as Full Stack Developer at SMP IT Hayatan Thayyibah, and as a freelance Frontend Developer for
+                various clients.
+              </p>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="year">2023 - Present</span>
+                  <h3>Full Stack Developer</h3>
+                  <p class="company">SMP IT Hayatan Thayyibah</p>
+                  <p>
+                    Develop and maintain school information systems including PPDB, e-learning, digital attendance,
+                    guest book, and correspondence modules using Laravel and Bootstrap.
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <span class="year">2022 - Present</span>
+                  <h3>Frontend Developer</h3>
+                  <p class="company">Freelancer</p>
+                  <p>
+                    Built responsive and interactive user interfaces for various clients using React.js, Tailwind CSS,
+                    and Bootstrap.
+                  </p>
+                </div>
+                <div class="timeline-item">
+                  <span class="year">2022 - 2022</span>
+                  <h3>UI/UX Designer</h3>
+                  <p class="company">PT Storeel Indonesia</p>
+                  <p>Designed 3D mobile and web-based applications, collaborating with cross-functional teams.</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="year">2021 - 2021</span>
+                  <h3>Employee</h3>
+                  <p class="company">Kebab Ahsan</p>
+                  <p>
+                    Provided customer service and managed daily operations in a fast-paced food & beverage environment.
+                  </p>
+                </div>
               </div>
-              <div class="resume-item">
-                <p class="year">2022 - present</p>
-                <h3>Frontend Developer</h3>
-                <p class="company">Freelancer</p>
-                <p>
-                  Built responsive and interactive user interfaces for various clients using React.js, Tailwind CSS, and
-                  Bootstrap.
-                </p>
+            </div>
+
+            <div class="resume-detail education">
+              <h2 class="heading">
+                My
+                <span>Education</span>
+              </h2>
+              <p class="desc">
+                A solid foundation in software development and information technology from Politeknik Sukabumi.
+              </p>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="year">2020 - 2023</span>
+                  <h3>Computer Engineering</h3>
+                  <p class="company">Politeknik Sukabumi</p>
+                  <p>Diploma III in Computer Engineering, with a strong foundation in software development and IT.</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="year">2017 - 2020</span>
+                  <h3>Natural Science</h3>
+                  <p class="company">SMA Al-Kholiliyah</p>
+                  <p>Developed critical thinking and scientific reasoning skills.</p>
+                </div>
               </div>
-              <div class="resume-item">
-                <p class="year">2022 - 2022</p>
-                <h3>UI/UX Designer</h3>
-                <p class="company">PT Storeel Indonesia</p>
-                <p>
-                  PT Storeel Indonesia is a company engaged in information technology, especially in the development of
-                  3D mobile and web-based applications.
-                </p>
+            </div>
+
+            <div class="resume-detail skills">
+              <h2 class="heading">
+                My
+                <span>Skills</span>
+              </h2>
+              <p class="desc">Strong proficiency in front-end development, UI/UX design, and back-end technologies.</p>
+              <div class="skills-grid">
+                <div class="skill-item" data-name="HTML5"><i class="bx bxl-html5"></i></div>
+                <div class="skill-item" data-name="CSS3"><i class="bx bxl-css3"></i></div>
+                <div class="skill-item" data-name="PHP"><i class="fa-brands fa-php"></i></div>
+                <div class="skill-item" data-name="JavaScript"><i class="bx bxl-javascript"></i></div>
+                <div class="skill-item" data-name="Laravel"><i class="fa-brands fa-laravel"></i></div>
+                <div class="skill-item" data-name="Vue JS"><i class="fa-brands fa-vuejs"></i></div>
+                <div class="skill-item" data-name="React JS"><i class="fa-brands fa-react"></i></div>
+                <div class="skill-item" data-name="Bootstrap"><i class="bx bxl-bootstrap"></i></div>
+                <div class="skill-item" data-name="Tailwind CSS"><i class="bx bxl-tailwind-css"></i></div>
               </div>
-              <div class="resume-item">
-                <p class="year">2021 - 2021</p>
-                <h3>Employee</h3>
-                <p class="company">Kebab Ahsan</p>
-                <p>
-                  Kebab Ahsan is a restaurant that serves kebabs with authentic flavors and high-quality ingredients.
-                </p>
+            </div>
+
+            <div class="resume-detail about">
+              <h2 class="heading">
+                About
+                <span>Me</span>
+              </h2>
+              <p class="desc">A passionate web developer with a strong background in front-end tech and design.</p>
+              <div class="about-grid">
+                <div class="about-item">
+                  <span>Name</span>
+                  <strong>Nanda Kamarul Zaman</strong>
+                </div>
+                <div class="about-item">
+                  <span>Gender</span>
+                  <strong>Male</strong>
+                </div>
+                <div class="about-item">
+                  <span>Age</span>
+                  <strong>24 Years Old</strong>
+                </div>
+                <div class="about-item">
+                  <span>Status</span>
+                  <strong>Unmarried</strong>
+                </div>
+                <div class="about-item">
+                  <span>City</span>
+                  <strong>Sukabumi</strong>
+                </div>
+                <div class="about-item">
+                  <span>Nationality</span>
+                  <strong>Indonesia</strong>
+                </div>
+                <div class="about-item">
+                  <span>Experience</span>
+                  <strong>4+ Years</strong>
+                </div>
+                <div class="about-item">
+                  <span>Full Time</span>
+                  <strong>Available</strong>
+                </div>
+                <div class="about-item">
+                  <span>Freelance</span>
+                  <strong>Available</strong>
+                </div>
+                <div class="about-item">
+                  <span>Phone</span>
+                  <strong>(+62) 895-6051-22329</strong>
+                </div>
+                <div class="about-item">
+                  <span>Email</span>
+                  <strong>nandakamarulzaman01@gmail.com</strong>
+                </div>
               </div>
             </div>
           </div>
-          <!-- ---------------------------------------------------------------------------------------------------------------------- -->
-          <div class="resume-detail education">
-            <h2 class="heading">
-              My
-              <span>Education</span>
-            </h2>
-            <p class="desc">
-              My education includes a Diploma III in Computer Engineering from Politeknik Sukabumi, where I gained a
-              solid foundation in software development and information technology.
-            </p>
-            <div class="resume-list">
-              <div class="resume-item">
-                <p class="year">2020 - 2023</p>
-                <h3>Computer Engineering</h3>
-                <p class="company">Politeknik Sukabumi</p>
-                <p>
-                  My education includes a Diploma III in Computer Engineering from Politeknik Sukabumi, where I gained a
-                  solid foundation in software development and information technology.
-                </p>
-              </div>
-              <div class="resume-item">
-                <p class="year">2017 - 2020</p>
-                <h3>Natural Science</h3>
-                <p class="company">SMA Al-Kholiliyah</p>
-                <p>
-                  My education includes a Natural Science program at SMA Al-Kholiliyah, where I developed a strong
-                  foundation in scientific principles and critical thinking.
-                </p>
+        </div>
+      </section>
+
+      <!-- ============================== PORTFOLIO ============================== -->
+      <section class="portfolio">
+        <div class="section-header">
+          <span class="section-tag">My Work</span>
+          <h2 class="heading">
+            Latest
+            <span>Projects</span>
+          </h2>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- Project 01 -->
+          <article class="project-card featured" data-project="1">
+            <div class="project-thumb">
+              <img src="img/portfolio/webSekolah.png" alt="School Website" />
+              <div class="thumb-overlay">
+                <i class="bx bx-expand"></i>
+                <span>View Details</span>
               </div>
             </div>
-          </div>
-          <!-- ---------------------------------------------------------------------------------------------------------------------- -->
-          <div class="resume-detail skills">
-            <h2 class="heading">
-              My
-              <span>Skills</span>
-            </h2>
-            <p class="desc">
-              My skills include a strong proficiency in front-end development, UI/UX design, and a solid understanding
-              of back-end technologies.
-            </p>
-            <div class="resume-list">
-              <div class="resume-item">
-                <i class="bx bxl-html5"></i>
-                <span>HTML5</span>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="numb">01</span>
+                <span class="project-type">Web Application</span>
               </div>
-              <div class="resume-item">
-                <i class="bx bxl-css3"></i>
-                <span>CSS3</span>
-              </div>
-              <div class="resume-item">
-                <i class="fa-brands fa-php"></i>
-                <span>PHP</span>
-              </div>
-              <div class="resume-item">
-                <i class="bx bxl-javascript"></i>
+              <h3>School Website</h3>
+              <p class="project-desc">
+                A complete school information platform — profiles, programs, and online services.
+              </p>
+              <div class="tech">
+                <span>Laravel</span>
+                <span>Bootstrap</span>
                 <span>JavaScript</span>
               </div>
-              <div class="resume-item">
-                <i class="fa-brands fa-laravel"></i>
-                <span>Laravel</span>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project-card" data-project="2">
+            <div class="project-thumb">
+              <img src="img/portfolio/e-learning.png" alt="E-Learning" />
+              <div class="thumb-overlay">
+                <i class="bx bx-expand"></i>
+                <span>View Details</span>
               </div>
-              <!-- <div class="resume-item">
-                <i class="bx bxl-react"></i>
-                <span>React.JS</span>
-              </div> -->
-              <div class="resume-item">
-                <i class="bx bxl-bootstrap"></i>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="numb">02</span>
+                <span class="project-type">Web Application</span>
+              </div>
+              <h3>E-Learning</h3>
+              <p class="project-desc">An online learning platform with materials, videos, quizzes, and forums.</p>
+              <div class="tech">
+                <span>Laravel</span>
+                <span>Bootstrap</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="project-card" data-project="3">
+            <div class="project-thumb">
+              <img src="img/portfolio/ppdb-test.png" alt="PPDB Test" />
+              <div class="thumb-overlay">
+                <i class="bx bx-expand"></i>
+                <span>View Details</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="numb">03</span>
+                <span class="project-type">Web Application</span>
+              </div>
+              <h3>PPDB Test</h3>
+              <p class="project-desc">
+                Online admission system for new students, from registration to selection results.
+              </p>
+              <div class="tech">
+                <span>Laravel</span>
                 <span>Bootstrap</span>
               </div>
-              <div class="resume-item">
-                <i class="bx bxl-tailwind-css"></i>
-                <span>Tailwind CSS</span>
+            </div>
+          </article>
+
+          <!-- Project 04 -->
+          <article class="project-card" data-project="4">
+            <div class="project-thumb">
+              <img src="img/portfolio/buku-tamu.png" alt="Guest Book" />
+              <div class="thumb-overlay">
+                <i class="bx bx-expand"></i>
+                <span>View Details</span>
               </div>
             </div>
-          </div>
-          <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="numb">04</span>
+                <span class="project-type">Web Application</span>
+              </div>
+              <h3>Guest Book</h3>
+              <p class="project-desc">A web app for recording visitor data and enhancing interactions.</p>
+              <div class="tech">
+                <span>Laravel</span>
+                <span>Bootstrap</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </article>
 
-          <div class="resume-detail about">
-            <h2 class="heading">
-              About
-              <span>Me</span>
-            </h2>
+          <!-- Project 05 -->
+          <article class="project-card" data-project="5">
+            <div class="project-thumb">
+              <img src="img/portfolio/absensi.png" alt="Digital Attendance" />
+              <div class="thumb-overlay">
+                <i class="bx bx-expand"></i>
+                <span>View Details</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="numb">05</span>
+                <span class="project-type">Web + RFID</span>
+              </div>
+              <h3>Digital Attendance</h3>
+              <p class="project-desc">Online attendance using RFID readers for quick and efficient recording.</p>
+              <div class="tech">
+                <span>Laravel</span>
+                <span>RFID</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 06 -->
+          <article class="project-card" data-project="6">
+            <div class="project-thumb">
+              <img src="img/portfolio/aindustri.png" alt="Convection Website" />
+              <div class="thumb-overlay">
+                <i class="bx bx-expand"></i>
+                <span>View Details</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="numb">06</span>
+                <span class="project-type">Web Application</span>
+              </div>
+              <h3>Convection Website</h3>
+              <p class="project-desc">Online platform for garment ordering, inventory, and management.</p>
+              <div class="tech">
+                <span>Laravel</span>
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 07 -->
+          <article class="project-card" data-project="7">
+            <div class="project-thumb">
+              <img src="img/portfolio/alkholiliyah.png" alt="School Website" />
+              <div class="thumb-overlay">
+                <i class="bx bx-expand"></i>
+                <span>View Details</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="numb">07</span>
+                <span class="project-type">Web Application</span>
+              </div>
+              <h3>SMA Al-Kholiliyah</h3>
+              <p class="project-desc">A complete school information platform for SMA Al-Kholiliyah.</p>
+              <div class="tech">
+                <span>Laravel</span>
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================== CONTACT ============================== -->
+      <section class="contact">
+        <div class="section-header">
+          <span class="section-tag">Let's Talk</span>
+          <h2 class="heading">
+            Get In
+            <span>Touch</span>
+          </h2>
+        </div>
+        <div class="contact-container">
+          <div class="contact-box contact-info">
+            <h2>Let's Work Together</h2>
             <p class="desc">
-              I am a passionate web developer with a strong background in front-end technologies and a keen eye for
-              design. I enjoy creating user-friendly interfaces and delivering seamless user experiences.
+              If you have a project in mind or need assistance, feel free to reach out — I usually reply within a day.
             </p>
-            <div class="resume-list">
-              <div class="resume-item">
-                <p>
-                  Name
-                  <span>Nanda Kamarul Zaman</span>
-                </p>
-              </div>
-              <div class="resume-item">
-                <p>
-                  Gender
-                  <span>Male</span>
-                </p>
-              </div>
-              <div class="resume-item">
-                <p>
-                  Age
-                  <span>24 Years Old</span>
-                </p>
-              </div>
-              <div class="resume-item">
-                <p>
-                  Status
-                  <span>Unmarried</span>
-                </p>
-              </div>
-              <div class="resume-item">
-                <p>
-                  City
-                  <span>Sukabumi</span>
-                </p>
-              </div>
-              <div class="resume-item">
-                <p>
-                  Nationality
-                  <span>Indonesia</span>
-                </p>
-              </div>
-              <div class="resume-item">
-                <p>
-                  Experience
-                  <span>4+ Years</span>
-                </p>
-              </div>
-              <div class="resume-item">
-                <p>
-                  Full Time
-                  <span>Available</span>
-                </p>
-              </div>
-              <div class="resume-item">
-                <p>
-                  Freelance
-                  <span>Available</span>
-                </p>
-              </div>
-              <div class="resume-item">
-                <p>
-                  Phone
-                  <span>(+62) 895-6051-22329</span>
-                </p>
-              </div>
-              <div class="resume-item">
-                <p>
-                  Email
-                  <span>nandakamarulzaman01@gmail.com</span>
-                </p>
+
+            <div class="contact-detail">
+              <i class="bx bxs-phone"></i>
+              <div class="detail">
+                <p>Phone</p>
+                <p>(+62) 895-6051-22329</p>
               </div>
             </div>
+            <div class="contact-detail">
+              <i class="bx bxs-envelope"></i>
+              <div class="detail">
+                <p>Email</p>
+                <p>nandakamarulzaman01@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <i class="bx bxs-map"></i>
+              <div class="detail">
+                <p>Address</p>
+                <p>Jl. Mad Tamin 12 Sukatani, Parakansalak, Sukabumi</p>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://github.com/nandakamarulzaman" target="_blank"><i class="bx bxl-github"></i></a>
+              <a href="https://www.linkedin.com/in/nanda-kamarul-zaman/" target="_blank">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com/kz.nanda/" target="_blank"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.youtube.com/@nanda4356" target="_blank"><i class="bx bxl-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-box contact-form-box">
+            <form id="contact-form" action="https://formspree.io/f/mblypwge" method="POST">
+              <h2 class="heading">
+                Send
+                <span>Message</span>
+              </h2>
+              <div class="field-box">
+                <div class="field">
+                  <label>Full Name</label>
+                  <input type="text" name="name" placeholder="John Doe" required />
+                </div>
+                <div class="field">
+                  <label>Email</label>
+                  <input type="email" name="email" placeholder="you@email.com" required />
+                </div>
+                <div class="field">
+                  <label>Phone</label>
+                  <input type="text" name="phone" placeholder="Optional" />
+                </div>
+                <div class="field">
+                  <label>Subject</label>
+                  <input type="text" name="subject" placeholder="Project inquiry" required />
+                </div>
+                <div class="field full">
+                  <label>Message</label>
+                  <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <input type="hidden" name="_replyto" value="nandakamarulzaman01@gmail.com" />
+                <input type="hidden" name="_language" value="en" />
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <span>Send Message</span>
+                <i class="bx bx-send"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== MODAL (DI LUAR SECTION/MAIN) ==================== -->
+    <div class="project-modal" id="project-modal">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-content">
+        <button class="modal-close" data-close aria-label="Close"><i class="bx bx-x"></i></button>
+        <div class="modal-image">
+          <img id="modal-img" src="" alt="" />
+        </div>
+        <div class="modal-info">
+          <div class="modal-meta">
+            <span class="numb" id="modal-numb">01</span>
+            <span class="project-type" id="modal-type">Web Application</span>
+          </div>
+          <h3 id="modal-title">School Website</h3>
+          <p id="modal-desc">Description</p>
+          <div class="tech" id="modal-tech"><span>Laravel</span></div>
+          <div class="live-github">
+            <a id="modal-live" target="_blank" href="#">
+              <i class="bx bx-arrow-back"></i>
+              <span>Live Demo</span>
+            </a>
+            <a id="modal-source" href="#">
+              <i class="bx bxl-github"></i>
+              <span>Source Code</span>
+            </a>
           </div>
         </div>
       </div>
-    </section>
-    <!-- resume end section -->
-    <!-- -------------------------------------------------------------------------------------------------- -->
-    <!-- portfolio section -->
-    <section class="portfolio">
-      <h2 class="heading">
-        Latest
-        <span>Project</span>
-      </h2>
-      <div class="portfolio-container">
-        <div class="portfolio-box">
-          <div class="portfolio-detail active">
-            <p class="numb">01</p>
-            <h3>School Website</h3>
-            <p>
-              School Website is a digital platform that provides complete information about the school, including
-              profiles, programs, activities, announcements, and online services for students, parents, and the
-              community.
-            </p>
-            <div class="tech">
-              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
-            </div>
-            <div class="live-github">
-              <a target="_blank" href="https://smpithayatanthayyibah.sch.id/beranda">
-                <i class="bx bx-arrow-back"></i>
-                <span>Live Project</span>
-              </a>
-              <a href="#">
-                <i class="bx bxl-github"></i>
-                <span>Github Repository</span>
-              </a>
-            </div>
-          </div>
+    </div>
 
-          <div class="portfolio-detail">
-            <p class="numb">02</p>
-            <h3>E-Learning</h3>
-            <p>
-              E-Learning is an online learning platform that provides various materials and learning resources for
-              students, including videos, quizzes, and discussion forums.
-            </p>
-            <div class="tech">
-              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
-            </div>
-            <div class="live-github">
-              <a target="_blank" href="https://e-learning.smpithayatanthayyibah.sch.id/">
-                <i class="bx bx-arrow-back"></i>
-                <span>Live Project</span>
-              </a>
-              <a href="#">
-                <i class="bx bxl-github"></i>
-                <span>Github Repository</span>
-              </a>
-            </div>
-          </div>
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <i class="bx bx-up-arrow-alt"></i>
+    </button>
 
-          <div class="portfolio-detail">
-            <p class="numb">03</p>
-            <h3>PPDB Test</h3>
-            <p>
-              PPDB Test is a system designed to assist the online admission process for new students, from registration
-              to the announcement of selection results.
-            </p>
-            <div class="tech">
-              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
-            </div>
-            <div class="live-github">
-              <a target="_blank" href="https://ppdb-dev.smpithayatanthayyibah.sch.id/">
-                <i class="bx bx-arrow-back"></i>
-                <span>Live Project</span>
-              </a>
-              <a href="#">
-                <i class="bx bxl-github"></i>
-                <span>Github Repository</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="portfolio-detail">
-            <p class="numb">04</p>
-            <h3>Guest Book</h3>
-            <p>
-              Guest Book is a web-based application that allows recording every visit to the school. This application is
-              designed to enhance interaction between visitors and site administrators.
-            </p>
-            <div class="tech">
-              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
-            </div>
-            <div class="live-github">
-              <a target="_blank" href="https://bukutamu.smpithayatanthayyibah.sch.id/">
-                <i class="bx bx-arrow-back"></i>
-                <span>Live Project</span>
-              </a>
-              <a href="#">
-                <i class="bx bxl-github"></i>
-                <span>Github Repository</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="portfolio-detail">
-            <p class="numb">05</p>
-            <h3>Digital Attendance</h3>
-            <p>
-              Digital Attendance is a system designed to facilitate the online attendance process for students. By
-              utilizing the latest technology, this application enables teachers and school staff to quickly and
-              efficiently record student attendance using RFID Readers.
-            </p>
-            <div class="tech">
-              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
-            </div>
-            <div class="live-github">
-              <a target="_blank" href="https://absensi.smpithayatanthayyibah.sch.id/">
-                <i class="bx bx-arrow-back"></i>
-                <span>Live Project</span>
-              </a>
-              <a href="#">
-                <i class="bx bxl-github"></i>
-                <span>Github Repository</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="portfolio-detail">
-            <p class="numb">06</p>
-            <h3>Convection Website</h3>
-            <p>
-              Convection Website is an online platform that provides ordering and management services for the garment
-              business. With features such as product catalogs, ordering systems, and inventory management, this website
-              is designed to improve the operational efficiency of the garment business.
-            </p>
-            <div class="tech">
-              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
-            </div>
-            <div class="live-github">
-              <a target="_blank" href="https://aindustri.co.id/">
-                <i class="bx bx-arrow-back"></i>
-                <span>Live Project</span>
-              </a>
-              <a href="#">
-                <i class="bx bxl-github"></i>
-                <span>Github Repository</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="portfolio-detail">
-            <p class="numb">07</p>
-            <h3>School Website</h3>
-            <p>
-              School Website is a digital platform that provides complete information about the school, including
-              profiles, programs, activities, announcements, and online services for students, parents, and the
-              community.
-            </p>
-            <div class="tech">
-              <p>Laravel, Bootstrap, JavaScript, JQuery</p>
-            </div>
-            <div class="live-github">
-              <a target="_blank" href="https://alkholiliyah.sch.id/">
-                <i class="bx bx-arrow-back"></i>
-                <span>Live Project</span>
-              </a>
-              <a href="#">
-                <i class="bx bxl-github"></i>
-                <span>Github Repository</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="portfolio-box">
-          <!-- image carousel -->
-          <div class="portfolio-carousel">
-            <div class="img-slide">
-              <div class="img-item">
-                <img src="img/portfolio/webSekolah.png" alt="" />
-              </div>
-              <div class="img-item">
-                <img src="img/portfolio/e-learning.png" alt="" />
-              </div>
-              <div class="img-item">
-                <img src="img/portfolio/ppdb-test.png" alt="" />
-              </div>
-              <div class="img-item">
-                <img src="img/portfolio/buku-tamu.png" alt="" />
-              </div>
-              <div class="img-item">
-                <img src="img/portfolio/absensi.png" alt="" />
-              </div>
-              <div class="img-item">
-                <img src="img/portfolio/konveksi.png" alt="" />
-              </div>
-              <div class="img-item">
-                <img src="img/portfolio/alkholiliyah.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div class="navigation">
-            <button class="arrow-left disabled">
-              <i class="bx bxs-chevron-left"></i>
-            </button>
-            <button class="arrow-right">
-              <i class="bx bx-arrow-left"></i>
-              <i class="bx bxs-chevron-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- portfolio end section -->
-    <!-- -------------------------------------------------------------------------------------------------- -->
-    <!-- section contact -->
-    <section class="contact">
-      <div class="contact-container">
-        <div class="contact-box">
-          <h2>Let's Work Together</h2>
-          <p class="desc">If you have a project in mind or need assistance, feel free to reach out!</p>
-          <div class="contact-detail">
-            <i class="bx bxs-phone"></i>
-            <div class="detail">
-              <p>Phone</p>
-              <p>(+62) 895-6051-22329</p>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <i class="bx bxs-envelope"></i>
-            <div class="detail">
-              <p>Email</p>
-              <p>nandakamarulzaman01@gmail.com</p>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <i class="bx bxs-map"></i>
-            <div class="detail">
-              <p>Address</p>
-              <p>Jl. Mad Tamin 12 Sukatani, Parakansalak, Sukabumi</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Form Kontak (diupdate) -->
-        <div class="contact-box">
-          <form id="contact-form" action="https://formspree.io/f/mblypwge" method="POST">
-            <h2 class="heading">
-              Contact
-              <span>Me!</span>
-            </h2>
-            <div class="field-box">
-              <input type="text" name="name" placeholder="Full Name" required />
-              <input type="email" name="email" placeholder="Email Address" required />
-              <input type="text" name="phone" placeholder="Phone Number" />
-              <input type="text" name="subject" placeholder="Email Subject" required />
-              <textarea name="message" placeholder="Your Message" required></textarea>
-
-              <!-- Hidden fields untuk konfigurasi Formspree -->
-              <input type="hidden" name="_replyto" value="nandakamarulzaman01@gmail.com" />
-              <input type="hidden" name="_language" value="en" />
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <!-- section end contact -->
-
-    <!-- custom script -->
     <script src="script.js"></script>
   </body>
 </html>
